@@ -1,0 +1,341 @@
+body, ul, li{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Bebas-Neue-Regular';
+  src:url('../fonts/Bebas-Neue-Regular.ttf.woff') format('woff'),
+      url('../fonts/Bebas-Neue-Regular.ttf.svg#Bebas-Neue-Regular') format('svg'),
+      url('../fonts/Bebas-Neue-Regular.ttf.eot'),
+      url('../fonts/Bebas-Neue-Regular.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+a:focus, a:hover{
+  text-decoration: none;
+}
+header{
+  max-height: 70px;
+  .nav-icon{
+    display: none !important;
+  }
+  .logo{
+    float: left;  
+    width: 250px;
+    height: 70px;  
+    background-color: #242424;
+    color: white;
+    text-align: center;
+    position: relative;
+    img{
+      margin-top: 12px;
+    }
+  }
+  @media only screen and (max-width:1042px){
+    .logo{
+      width: 125px;
+    }
+  }
+  .main-nav{
+    background-color: #767676;
+    height: 70px;
+    nav{
+      float: right;
+      ul li{
+        list-style-type: none;
+        float: left;
+        margin-left: 42px;
+        margin-top: 32px;
+        &.active{
+          border-bottom: 3px solid #126FB9;
+          padding-bottom:14px;
+        }
+        &.outerlanguageBtnDiv{
+          height: 9px;
+        }
+        a{
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+      }
+      .languageBtn{
+        background-color: #BBBBBB;
+        color: white;
+        font-size: 41px;
+        position: relative;
+        top: -32px;
+        text-align: center;
+        height: 70px;
+        padding: 15px;
+      }
+    }
+  }
+
+  @media only screen and (max-width:1143px){
+    ul li:first-child{
+      margin-right: 5px;
+    }
+    .outerlanguageBtnDiv{
+      display: none;
+    }
+  }
+  // for small screen nav and nav-icon (responsive)
+  @media only screen and (max-width:911px){
+    .row{
+      margin-right: 0;
+    }
+    .nav-icon{
+      display: block !important;
+      font-size: 19px;
+      margin-top: 19px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .container-fluid{
+      padding: 0;
+      width: 100%;
+    }
+    nav{
+      background: #555;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+    nav ul{
+      height: 0;
+      overflow: hidden;
+    }
+    nav ul.open{
+      height: auto;
+    }
+    nav li{
+      float: none;
+      width: 100%;
+      margin: 0 !important;
+    }
+    nav li a{
+      display: block;
+      text-align: center;
+      padding: 10px;
+      color: #999;
+      border-top: 1px solid #4f4f4f; 
+    }
+  }
+} 
+
+header:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.main-content{
+  background-color: #ECECEC;
+  padding-bottom: 67px;
+  h1{
+    margin-top: 50px;
+    margin-bottom: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #27699B;
+    font-size: 54px;
+    font-family: 'Bebas-Neue-Regular';
+    }
+    p{
+      color: #858585;
+      font-size: 16px;
+    }
+  .carousel-control.left, .carousel-control.right{
+    background-image: none
+  }
+}
+
+hr{
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #707070;
+  position: relative;
+  z-index: 2;
+}
+
+.contactByCountry{
+  position: relative;
+  top: -1px;
+  background-color: #ECECEC;
+  padding-bottom: 35px;
+  .nav-tabs>li{
+    margin-top: 1px;
+  }
+  .nav-tabs>li>a{
+    text-align: center;
+    color: #3771A1;
+    font-size: 16px;
+    font-weight: bold;
+    border: 0;
+  }
+  .nav-tabs>li.active{
+    border-top: 3px solid #126FB9;
+  }
+  .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    background-color: #E0E0E0;
+    // padding: 17px 20px 10px;
+    color: #3771A1;
+  }
+  .nav>li>a>img{
+    margin-bottom: 9px;
+  }
+  .downArrow{
+    border: solid #3978A4;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: relative;
+    top: -2px;
+    left: 5px;
+  }
+  .tab-content>.active {
+    background-color: #E0E0E0;
+  }
+  %h2{
+    margin-top: 0;
+    margin-bottom: 22px;
+    color: #1570A9;
+    font-size: 40px;
+    font-family: 'Bebas-Neue-Regular';    
+  }
+  .brief{
+    padding: 45px 20px;
+    h2{
+      @extend %h2;
+    }
+    P{
+      color: #9B9B9B;
+    }
+    button{
+      margin-top: 92px;
+      width: 200px;
+      height: 50px;
+      background-color: #0B6FBB;
+      color: white;
+      border: 0;
+    }
+    @media only screen and(max-width: 994px){
+      button{
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .contact{
+    padding: 45px 20px;
+    h2{
+      @extend %h2;
+      margin-bottom: 5px;
+    }
+    hr{
+      margin-bottom: 14px;
+    }
+    p{
+      color: #29689B;
+    }
+  }
+}
+
+.separator{
+  background-color: #767676;
+  height: 21px;
+}
+
+footer{
+  padding-bottom: 25px;
+  background-color: #222222;
+  h3{
+    margin-top: 60px;
+    margin-bottom: 18px;
+    color: white;
+  }
+  p{
+    color: #595959;
+  }
+  .footer-links{
+    margin-top: 68px;
+    margin-bottom: 10px;
+    .footer-social{
+      img{
+        margin-right: 7px;
+      }
+    }
+    .footer-other-links{
+      h5{
+        margin-top: 0;
+        font-weight: bold;
+        color: #666666;
+      }
+      ul{
+        li{
+          list-style-type: none;
+          float: left;
+          margin-right: 12px;
+          a{
+            color: #595959;
+            text-decoration: none;
+          }
+        }
+        li:after{
+          content: " |";
+          color: #595959;
+          padding-left: 7px;
+        }
+        li:last-child:after{
+          content: '';
+        }
+      }
+    }
+  }
+  @media only screen and(max-width: 994px){
+    .footer-social{
+      img{
+        margin-bottom: 17px;
+      }
+    }
+  }
+  .copyright{
+    color: #424242;
+  }
+  .policy{
+    ul{
+      li{
+        list-style-type: none;
+        float: right;
+        margin-right: 13px;
+      }
+      a{
+        color: #595959;
+        text-decoration: none;
+      }
+      li:after{
+        content: " |";
+        color: #595959;
+        padding-left: 7px;
+      }
+      li:first-child:after{
+        content: '';
+      }
+    }
+  }
+}
+
+// for turning bootstrap tabs into collapse component
+@media (max-width: 1203px) {
+  .hidden-tabs {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1203px) {
+  .visible-tabs {
+    display: block !important;
+  }
+}
