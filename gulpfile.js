@@ -4,10 +4,12 @@ var concat = require('gulp-concat');
 var sass = require('gulp-ruby-sass');
 
 
-//2 files
+//4 files
 var usedJSFiles = [
     'js/jquery.min.js',
     'js/bootstrap.min.js',
+    'js/bootstrap-tabcollapse.js',
+    'js/scripts.js'
   ];
 
 var sassFile = 'scss/styles.scss';
